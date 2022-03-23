@@ -1,3 +1,6 @@
+# Full Stack Web App - Prodsmart
+#### Follow the instructions to run the web app.
+
 # Install Docker
 Read Documentation on: https://docs.docker.com/desktop/mac/install/
 
@@ -16,7 +19,8 @@ http://localhost:3000/
 # Server - REST API
 http://localhost:7000/
 
-
+## Physical Diagram - MySQL database
+![alt text](https://raw.githubusercontent.com/renatojmsantos/webapp/master/db_physical_diagram.png?token=GHSAT0AAAAAABMMJRQLJB4PBUVFBYRUBA2GYSE2GVQ)
 
 ## REST API - Endpoints
 #### TODO: Use Filtering, Sorting, Pagination, SSL
