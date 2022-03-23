@@ -23,7 +23,7 @@ function ViewStockItem(props){
     const [moves, setMoves] = useState([]);
     const [currentStock, setCurrentStock] = useState(0);
 
-    useEffect(()=>{
+    useEffect( () =>{
         fetch('http://localhost:7000/stock/'+props.order.item_name,{
         method: 'GET',
         mode: 'cors',
@@ -62,22 +62,7 @@ function ViewStockItem(props){
         creationdate = creationdate.replace(".000Z","");
         return creationdate;
     }
-    /*
-    async function currentStock(){
-        await fetch('http://localhost:7000/stock/current/'+props.order.item_name,{
-            method: 'GET',
-            mode: 'cors',
-            headers: { 'Content-Type': 'application/json' }
-        }).then(res => res.json())
-        .then((data) =>{
-            setCurrent(data);
-            return data;
-        })
-        .catch(err =>{
-            console.error(err);
-        });
-    }*/
-
+    
     return (props.trigger) ? (
     
         <Box className="popup">

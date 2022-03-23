@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 
 import '../popUp.css'
 
@@ -10,10 +10,7 @@ import {
   Modal,
   Box,
   Typography,
-  TextField,
-  InputLabel,
   Button,
-  Select,
   Slider
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
