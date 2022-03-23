@@ -31,10 +31,9 @@ function ViewStockItem(props){
         }).then(res => res.json())
         .then((data) =>{
             setMoves(data);
-            //console.log(data[0]);
         })
         .catch(err =>{
-            console.error(err);
+            console.error(err); 
         });
 
         fetch('http://localhost:7000/stock/current/'+props.order.item_name,{
