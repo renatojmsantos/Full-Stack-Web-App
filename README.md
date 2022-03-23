@@ -13,10 +13,10 @@ docker-compose up -d
 # Web App is Ready!
 ![alt text](https://raw.githubusercontent.com/renatojmsantos/webapp/master/printScreens/Screenshot%202022-03-23%20at%2020.26.08.png?token=GHSAT0AAAAAABMMJRQLKBNSPJRDL3DWGMIQYSEZ4GA)
 
-# Client - Web Interface
+# Client - Web Interface - React JS + Material UI
 http://localhost:3000/
 
-# Server - REST API
+# Server - REST API - Node JS + Express + MySQL
 http://localhost:7000/
 
 ## Physical Diagram - MySQL database
