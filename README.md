@@ -1,61 +1,88 @@
-## Install Docker
+# Full Stack Web App - Prodsmart
+#### Follow the instructions to run the web app.
+
+# Install Docker
 Read Documentation on: https://docs.docker.com/desktop/mac/install/
 
-## start images: mysql, server, client... this may take some minutes... please wait.
+# Start Docker Compose 
+### Images: mysql, server, client... This may take some minutes...
+```
 docker-compose up -d
+```
 
-## Client - Web Interface
-http://localhost:3000/
+# Web App is Ready!
+![alt text](https://raw.githubusercontent.com/renatojmsantos/webapp/master/printScreens/Screenshot%202022-03-23%20at%2020.26.08.png?token=GHSAT0AAAAAABMMJRQLKBNSPJRDL3DWGMIQYSEZ4GA)
 
-## Server - REST API
-http://localhost:7000/
+# Client - Web Interface - React JS + Material UI
+#### http://localhost:3000/
 
-## see logs
-docker-compose logs
+# Server - REST API - Node JS + Express + MySQL
 
-## check which containers are running
-docker ps
+#### http://localhost:7000/
 
-## build again
-docker-compose up --build
+## Physical Diagram - MySQL database
+![alt text](https://raw.githubusercontent.com/renatojmsantos/webapp/master/db_physical_diagram.png?token=GHSAT0AAAAAABMMJRQLJB4PBUVFBYRUBA2GYSE2GVQ)
 
 ## REST API - Endpoints
-# TODO: 
-# Use Filtering,e.g. https://mysite.com/posts?tags=javascript
-# Sorting, 
-# and Pagination to Retrieve the Data Requested 
-# Use SSL for Security
+#### TODO: Use Filtering, Sorting, Pagination, SSL
 
-# Items
+### Items
+```
 GET /items
+
 GET /items/:name
+
 POST /items/
+
 PATCH /items/:name
+
 DELETE /items/:name
-
-# Users
+```
+### Users
+```
 GET /users
+
 GET /users/:email
+
 GET /users/:name
+
 POST /users
+
 PUT /users/:email
+
 DELETE /users/:email
-
-# StockMovements
+```
+### StockMovements
+```
 GET /stock
-GET /stock/:item
-GET /stock/current/:item
-POST /stock
-PATCH /stock/:creationdate
-DELETE /stock/:creationdate
 
-# Orders
+GET /stock/:item
+
+GET /stock/current/:item
+
+POST /stock
+
+PATCH /stock/:creationdate
+
+DELETE /stock/:creationdate
+```
+### Orders
+```
 GET /orders
+
 GET /orders/incomplete
+
 GET /orders/:item
+
 GET /orders/date/:creationdate
+
 POST /orders
+
 PATCH /orders/quantity/:creationdate
+
 PATCH /orders/status/:creationdate
+
 PATCH /orders/accept/:creationdate
+
 DELETE /orders/:creationdate
+```
