@@ -1,61 +1,83 @@
-## Install Docker
+# Install Docker
 Read Documentation on: https://docs.docker.com/desktop/mac/install/
 
-## start images: mysql, server, client... this may take some minutes... please wait.
+# Start Docker Compose 
+### Images: mysql, server, client... This may take some minutes...
+```
 docker-compose up -d
+```
 
-## Client - Web Interface
+# Web App is Ready!
+![alt text](https://raw.githubusercontent.com/renatojmsantos/webapp/master/printScreens/Screenshot%202022-03-23%20at%2020.26.08.png?token=GHSAT0AAAAAABMMJRQLKBNSPJRDL3DWGMIQYSEZ4GA)
+
+# Client - Web Interface
 http://localhost:3000/
 
-## Server - REST API
+# Server - REST API
 http://localhost:7000/
 
-## see logs
-docker-compose logs
 
-## check which containers are running
-docker ps
-
-## build again
-docker-compose up --build
 
 ## REST API - Endpoints
-# TODO: 
-# Use Filtering,e.g. https://mysite.com/posts?tags=javascript
-# Sorting, 
-# and Pagination to Retrieve the Data Requested 
-# Use SSL for Security
+#### TODO: Use Filtering, Sorting, Pagination, SSL
 
-# Items
+### Items
+```
 GET /items
+
 GET /items/:name
+
 POST /items/
+
 PATCH /items/:name
+
 DELETE /items/:name
-
-# Users
+```
+### Users
+```
 GET /users
+
 GET /users/:email
+
 GET /users/:name
+
 POST /users
+
 PUT /users/:email
+
 DELETE /users/:email
-
-# StockMovements
+```
+### StockMovements
+```
 GET /stock
-GET /stock/:item
-GET /stock/current/:item
-POST /stock
-PATCH /stock/:creationdate
-DELETE /stock/:creationdate
 
-# Orders
+GET /stock/:item
+
+GET /stock/current/:item
+
+POST /stock
+
+PATCH /stock/:creationdate
+
+DELETE /stock/:creationdate
+```
+### Orders
+```
 GET /orders
+
 GET /orders/incomplete
+
 GET /orders/:item
+
 GET /orders/date/:creationdate
+
 POST /orders
+
 PATCH /orders/quantity/:creationdate
+
 PATCH /orders/status/:creationdate
+
 PATCH /orders/accept/:creationdate
+
 DELETE /orders/:creationdate
+```
