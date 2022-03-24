@@ -10,7 +10,6 @@ CREATE TABLE stockmovement (
 	PRIMARY KEY(creationdate,item_name)
 );
 
-
 CREATE TABLE user (
 	name	 varchar(512),
 	email varchar(512),
@@ -33,12 +32,6 @@ ALTER TABLE orderitem ADD CONSTRAINT orderitem_fk2 FOREIGN KEY (user_email) REFE
 
 INSERT into user values('Renato Santos','renatojmsantos@gmail.com');
 INSERT into item values('PlayStation 5');
-insert into stockmovement values('2022-01-20 23:10:03',5,'PlayStation 5');
+insert into stockmovement values('2022-01-20 23:10:03',100,'PlayStation 5');
 insert into orderitem values('2022-01-19 23:01:15',5,false,'PlayStation 5','renatojmsantos@gmail.com');
 
-select * from user;
-select * from item;
-SELECT * from stockmovement;
-SELECT * from orderitem;
-
-SELECT 1 + 1 AS solution

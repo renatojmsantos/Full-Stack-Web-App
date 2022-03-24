@@ -1,10 +1,10 @@
-// Create = Post ; Read = Get; Update = Put ; Delete = Delete
 const express = require('express');
 const cors = require('cors');
-const Joi = require('joi'); //joi@13.1.0
 require('dotenv/config');
 
 const app = express();
+
+// TODO: file that creates tables for mysql
 
 // Import Routes
 const items = require('./routes/items');
@@ -25,9 +25,13 @@ app.use('/stock',stockMovements);
 
 // http://localhost:7000/ -> the server is on.
 app.get('/', async(req,res) => {
-    res.send('Hello! The server is on. ');
+    res.status(200).send('Hello! The server is on. ');
 });
 
+// all other requests to / redirect to 404
+app.all("*", async(req, res) => {
+    res.status(404).send('Not Found!');
+});
 
 try{
     const BACKUP_PORT = 8080;
