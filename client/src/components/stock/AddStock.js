@@ -66,7 +66,7 @@ function AddStock(props){
     .catch(err =>{
         console.error(err);
     });
-  },[])
+  },[props.trigger])
 
   async function createStock(quantity, itemName){
     console.log(quantity,itemName);
@@ -108,7 +108,7 @@ function AddStock(props){
                           label="Item"
                           onChange={handleChangeItem}
                           >
-                          {console.log(items)}
+                          
                           {items.map(({name},index)=>(
                               <MenuItem key={index} value={name}>{name}</MenuItem>
                           ))}

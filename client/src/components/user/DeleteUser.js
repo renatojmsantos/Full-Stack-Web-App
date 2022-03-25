@@ -1,9 +1,6 @@
 import React from "react";
-
 import '../popUp.css'
-
 import CloseIcon from '@mui/icons-material/Close';
-
 import {
   IconButton,
   Modal,
@@ -14,8 +11,6 @@ import {
 
 
 function DeleteUser(props){
-
-  
   async function deleteUser(){
     
     await fetch('http://localhost:7000/users/'+props.user.email, {
