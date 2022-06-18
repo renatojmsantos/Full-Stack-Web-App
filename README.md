@@ -1,4 +1,4 @@
-# Full Stack Web App - Prodsmart
+# Full Stack Web App
 #### Follow the instructions to run the web app.
 
 # Install Docker
